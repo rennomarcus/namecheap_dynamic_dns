@@ -4,7 +4,7 @@ if [ -e ~/.namecheap_dynamic_dns ]; then
   . ~/.namecheap_dynamic_dns
 fi
 
-export EXTERNAL_IP=`wget -O - http://ipecho.net/plain 2>/dev/null`
+export EXTERNAL_IP=`wget -O - https://dynamicdns.park-your-domain.com/getip 2>/dev/null`
 
 if [ "${NAMECHEAP_HOSTNAME}" = "" ]; then
   echo "no NAMECHEAP_HOSTNAME defined" 1>&2
